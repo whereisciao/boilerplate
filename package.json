@@ -1,0 +1,16 @@
+{
+  "name": "boilerplate",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "colors": "0.6.x",
+    "ejs": "0.8.x",
+    "everyauth" : "0.4.x",
+    "express": "3.4.x",
+    "nib" : "1.0.x",
+    "stylus": "0.38.x",
+    "winston": "0.7.x"
+  }
+}
