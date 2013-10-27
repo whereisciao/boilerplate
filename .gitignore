@@ -1,3 +1,4 @@
 .idea
 .nodemonignore
+config.json
 node_modules

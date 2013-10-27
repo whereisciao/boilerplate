@@ -6,7 +6,8 @@ var core = require('./core')()
   , path = require('path')
   , routes = require('./routes')
   , stylus = require('stylus')
-  , user = require('./routes/user');
+  , user = require('./routes/user')
+  , auth = require('./routes/auth');
 
 var app = express()
   , logger = core.getLogger('main')
@@ -43,8 +44,9 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
-app.get('/users', user.list);
+//auth.addAll(app);
+app.use('/', routes.index);
+app.use('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   logger.info('Express server listening on port ' + app.get('port'));

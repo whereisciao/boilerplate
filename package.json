@@ -7,10 +7,18 @@
   "dependencies": {
     "colors": "0.6.x",
     "ejs": "0.8.x",
-    "everyauth" : "0.4.x",
     "express": "3.4.x",
+    "nconf" : "0.6.x",
     "nib" : "1.0.x",
+    "passport" : "0.1.x",
+    "passport-facebook" : "1.0.x",
+    "passport-github" : "0.1.x",
+    "passport-google" : "0.3.x",
+    "passport-twitter" : "1.0.x",
     "stylus": "0.38.x",
     "winston": "0.7.x"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }

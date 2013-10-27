@@ -1,9 +1,6 @@
 var winston = require('winston')
-  , config = require('./config');
-
-winston.addColors(config.winston.colors);
-var logger = new (winston.Logger)();
-logger.setLevels(config.winston.levels);
+  , config = require('./config')
+  , logger = config.logger;
 
 /**
  * Construct the Core module.
@@ -38,7 +35,12 @@ module.exports = function() {
     return winston.loggers.get(name);
   }
 
+  function getConfig() {
+    return config;
+  }
+
   return {
+    'getConfig' : getConfig,
     'getLogger' : getLogger,
     'getLoggerSettings' : getLoggerSettings
   }
